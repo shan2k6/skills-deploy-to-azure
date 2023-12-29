@@ -14,10 +14,11 @@ _Create two deployment workflows using GitHub Actions and Microsoft Azure._
 </header>
 
 <!--
-  <<< Author notes: Step 3 >>>
+ <<< Author notes: Step 3 >>>
   Start this step by acknowledging the previous step.
   Define terms and link to docs.github.com.
 -->
+
 
 ## Step 3: Spin up an environment based on labels
 
