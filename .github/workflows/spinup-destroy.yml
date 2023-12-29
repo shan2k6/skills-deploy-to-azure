@@ -13,6 +13,7 @@ env:
   ### Replace <username> with GitHub username ###
   ###############################################
   AZURE_WEBAPP_NAME: shansunny-ttt-app
+  
 
 jobs:
   setup-up-azure-resources:
