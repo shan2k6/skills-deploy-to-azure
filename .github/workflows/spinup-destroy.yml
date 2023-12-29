@@ -7,7 +7,7 @@ on:
 env:
   IMAGE_REGISTRY_URL: ghcr.io
   AZURE_RESOURCE_GROUP: rg-MOCPEDemo-kcl-westus-002
-  AZURE_APP_PLAN: actions-ttt-deployment
+  AZURE_APP_PLAN: k-cjot-git-spln
   AZURE_LOCATION: '"West US"'
   ###############################################
   ### Replace <username> with GitHub username ###
@@ -33,10 +33,10 @@ jobs:
       #  run: |
       #    az group create --location ${{env.AZURE_LOCATION}} --name ${{env.AZURE_RESOURCE_GROUP}} --subscription ${{secrets.AZURE_SUBSCRIPTION_ID}}
 
-      - name: Create Azure app service plan
-        if: success()
-        run: |
-          az appservice plan create --resource-group ${{env.AZURE_RESOURCE_GROUP}} --name ${{env.AZURE_APP_PLAN}} --is-linux --sku F1 --subscription ${{secrets.AZURE_SUBSCRIPTION_ID}}
+      #- name: Create Azure app service plan
+      #  if: success()
+      #  run: |
+      #    az appservice plan create --resource-group ${{env.AZURE_RESOURCE_GROUP}} --name ${{env.AZURE_APP_PLAN}} --is-linux --sku F1 --subscription ${{secrets.AZURE_SUBSCRIPTION_ID}}
 
       - name: Create webapp resource
         if: success()
@@ -62,7 +62,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Destroy Azure environment
-        if: success()
-        run: |
-          az group delete --name ${{env.AZURE_RESOURCE_GROUP}} --subscription ${{secrets.AZURE_SUBSCRIPTION_ID}} --yes
+     # - name: Destroy Azure environment
+     #   if: success()
+     #   run: |
+     #     az group delete --name ${{env.AZURE_RESOURCE_GROUP}} --subscription ${{secrets.AZURE_SUBSCRIPTION_ID}} --yes
