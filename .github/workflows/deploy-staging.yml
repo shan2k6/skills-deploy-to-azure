@@ -10,7 +10,7 @@ env:
   ### Replace <username> with GitHub username ###
   ###############################################
   DOCKER_IMAGE_NAME: shan2k6-azure-ttt
-  AZURE_WEBAPP_NAME: shan2k6-ttt-app
+  AZURE_WEBAPP_NAME: shansunny-ttt-app
   ###############################################
 
 jobs:
